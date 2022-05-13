@@ -24,7 +24,28 @@ public class Embrace extends Effect {
 			}
 	}
 	public void remove(Champion c){
+		int w = c.getSpeed();
+		int x= 0;
+		int y = c.getAttackDamage();
+		int s= c.getMana();
+		
+		for(int i = 0; i<c.getAbilities().size(); i++) {
+			if(c.getAppliedEffects().get(i) instanceof Embrace){
+				w= (int)(c.getSpeed()/1.2);
+				c.setSpeed(w);	
+				y= (int)(c.getAttackDamage()/(1.2));
+				c.setAttackDamage(y);
+				s= (int)(c.getMana()/(1.2));
+				c.setMana(s);
+				x = (int) (0.2 * c.getMaxHP());
+				c.setCurrentHP(x);
+				
+			}
+			i++;
+		
+		}
+	
 		
 	}
-
 }
+

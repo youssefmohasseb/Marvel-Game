@@ -37,6 +37,7 @@ public class SpeedUp extends Effect{
 				c.setMana(y);
 		
 	}
+i++;
 }
 	}
 }
